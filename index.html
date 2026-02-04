@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prajal Gautam | IT Engineering Student & Web Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #2563eb;
+      --card: #f1f5f9;
+      --border: #e2e8f0;
+    }
+
+    body.dark {
+      --bg: #0b1020;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --card: #111827;
+      --border: #1f2937;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a { color: var(--accent); text-decoration: none; font-weight: 500; }
+
+    header {
+      position: fixed;
+      top: 0; width: 100%; z-index: 1000;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    body.dark header { background: rgba(11,16,32,0.85); }
+
+    .nav {
+      max-width: 1200px; margin: auto;
+      padding: 1rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    .nav strong { font-weight: 700; letter-spacing: 0.2px; }
+    .nav-links a { margin-left: 1.5rem; }
+
+    .toggle {
+      margin-left: 1rem; cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 0.3rem 0.6rem; border-radius: 6px;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 6rem 1.5rem 4rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800; line-height: 1.2;
+    }
+
+    .hero span { color: var(--accent); }
+
+    .hero p {
+      max-width: 720px;
+      margin-top: 1.5rem;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .buttons { margin-top: 2.5rem; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-right: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.secondary { background: var(--card); color: var(--text); }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      font-size: 2.2rem; font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .sub { color: var(--muted); margin-bottom: 2.5rem; max-width: 700px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.8rem;
+      border-radius: 14px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+    }
+
+    .timeline {
+      display: grid; gap: 1.5rem;
+      border-left: 2px solid var(--border);
+      padding-left: 2rem;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.65rem; top: 0.4rem;
+      width: 12px; height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <strong>Prajal Gautam</strong>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+      <button class="toggle" onclick="toggleTheme()">🌓</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <h1>Building Strong Foundations in <span>Web & Cloud Engineering</span></h1>
+  <p>
+    I am Prajal Gautam, a Bachelor of Engineering student in Information Technology at Pokhara University.
+    I focus on writing clean, maintainable web code using HTML, CSS, and JavaScript, while actively learning
+    React, Next.js, and AWS through official cloud training programs.
+  </p>
+  <div class="buttons">
+    <a href="#contact" class="btn primary">Get in Touch</a>
+    <a href="#resume" class="btn secondary">View Resume</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p class="sub">
+    I am a motivated IT engineering student with a strong interest in modern web technologies and cloud computing.
+    My goal is to grow into a professional software engineer by mastering fundamentals, building real-world projects,
+    and understanding scalable systems deployed on the cloud.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <p class="sub">A growing skill set focused on web development fundamentals and cloud basics.</p>
+  <div class="cards">
+    <div class="card"><strong>HTML5</strong><br>Semantic markup, accessibility, SEO-ready structure</div>
+    <div class="card"><strong>CSS3</strong><br>Responsive layouts, Flexbox, Grid, modern UI design</div>
+    <div class="card"><strong>JavaScript</strong><br>Core concepts, DOM manipulation, ES6+</div>
+    <div class="card"><strong>React & Next.js</strong><br>Currently learning component-based development</div>
+    <div class="card"><strong>AWS Cloud</strong><br>Foundational services, cloud concepts (in progress)</div>
+    <div class="card"><strong>Git & GitHub</strong><br>Version control and project collaboration</div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <strong>Bachelor of Engineering in Information Technology (BE IT)</strong><br>
+      Pokhara University – NCIT College<br>
+      <span class="sub">5th Semester · 2022 – Present</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">Personal and academic projects demonstrating applied learning.</p>
+  <div class="cards">
+    <div class="card">
+      <strong>Professional Portfolio Website</strong>
+      <p>
+        Designed and developed a responsive personal portfolio using HTML, CSS, and JavaScript,
+        featuring dark/light mode, smooth scrolling, and clean UI principles.
+      </p>
+    </div>
+    <div class="card">
+      <strong>Upcoming Web & Cloud Projects</strong>
+      <p>
+        Currently building new projects as I progress with React, Next.js, and AWS services.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <p class="sub">Download my resume for a complete overview of my education and technical focus.</p>
+  <div class="buttons">
+    <a href="resume_prajal_gautam.pdf" class="btn primary">Download PDF</a>
+    <a href="resume_prajal_gautam.docx" class="btn secondary">Download DOCX</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:prajal.gautam.co@gmail.com">prajal.gautam.co@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/prajal-gautam" target="_blank">github.com/prajal-gautam</a></p>
+  <p>LinkedIn: Verification in progress</p>
+  <p>Instagram: <a href="https://www.instagram.com/prajal.xiv/" target="_blank">@prajal.xiv</a></p>
+</section>
+
+<footer>
+  © 2026 Prajal Gautam · Built with focus on clean engineering principles
+</footer>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+  }
+</script>
+
+</body>
+</html>
