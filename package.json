@@ -1,17 +1,21 @@
 {
-	"name": "monorepo",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"dev": "concurrently --kill-others --raw \"npm run dev --prefix apps/web\"",
-		"build": "concurrently --raw \"npm run build --prefix apps/web\"",
-		"start": "concurrently --kill-others --raw",
-		"lint": "concurrently --raw \"npm run lint --prefix apps/web\""
-	},
-	"devDependencies": {
-		"concurrently": "^9.1.2"
-	},
-	"workspaces": [
-		"apps/*"
-	]
+  "name": "monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://prajal-gautam.github.io/Portfolio",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d apps/web/build",
+    "dev": "concurrently --kill-others --raw \"npm run dev --prefix apps/web\"",
+    "build": "concurrently --raw \"npm run build --prefix apps/web\"",
+    "start": "concurrently --kill-others --raw",
+    "lint": "concurrently --raw \"npm run lint --prefix apps/web\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "gh-pages": "^6.3.0"
+  },
+  "workspaces": [
+    "apps/*"
+  ]
 }
