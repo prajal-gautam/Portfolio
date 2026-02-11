@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prajal Gautam - Frontend Developer & React Enthusiast</title>
+  <meta name="description" content="Portfolio of Prajal Gautam, a Frontend Developer specializing in React, UI/UX, and building beautiful, performant digital experiences.">
+  <link rel="preload" href="resume.pdf" as="document">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prajal Gautam",
+    "url": "https://prajal-gautam.github.io/portfolio/",
+    "sameAs": [
+      "https://github.com/prajal-gautam",
+      "https://linkedin.com/in/prajal-gautam",
+      "https://instagram.com/prajal.gautam"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation Header -->
+  <header class="fixed top-0 w-full backdrop-blur-sm bg-slate-950/80 border-b border-slate-800/50 z-50">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center max-w-6xl">
+      <div class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+        PG
+      </div>
+      <ul class="hidden md:flex gap-8">
+        <li><a href="#home" class="text-slate-300 hover:text-blue-400 transition-colors">Home</a></li>
+        <li><a href="#about" class="text-slate-300 hover:text-blue-400 transition-colors">About</a></li>
+        <li><a href="#skills" class="text-slate-300 hover:text-blue-400 transition-colors">Skills</a></li>
+        <li><a href="#projects" class="text-slate-300 hover:text-blue-400 transition-colors">Projects</a></li>
+        <li><a href="#contact" class="text-slate-300 hover:text-blue-400 transition-colors">Contact</a></li>
+      </ul>
+      <button id="downloadBtn" class="hidden md:block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors">
+        Download Resume
+      </button>
+      <button id="themeToggle" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors">
+        🌙
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col justify-center relative overflow-hidden py-20 md:py-0 pt-20 md:pt-0">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-purple-600/10 pointer-events-none"></div>
+    
+    <!-- Animated particles -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10 max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="order-2 md:order-1">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4">
+            <span class="bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
+              I'm Prajal Gautam
+            </span>
+          </h1>
+          <div class="text-2xl md:text-3xl mb-8 h-16">
+            <span class="text-blue-400 font-semibold">
+              <span id="typingText"></span><span class="animate-blink">|</span>
+            </span>
+          </div>
+          <div class="flex gap-4 mb-8">
+            <a href="https://github.com/prajal-gautam" target="_blank" class="p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg transition-colors">
+              <svg class="w-6 h-6 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/prajal-gautam" target="_blank" class="p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg transition-colors">
+              <svg class="w-6 h-6 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+            <a href="https://instagram.com/prajal.gautam" target="_blank" class="p-3 bg-slate-800/50 hover:bg-slate-700 rounded-lg transition-colors">
+              <svg class="w-6 h-6 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 15.892c-1.482 1.482-3.447 2.297-5.537 2.297-1.969 0-3.817-.707-5.255-1.994-1.482-1.482-2.297-3.447-2.297-5.537 0-1.969.707-3.817 1.994-5.255 1.482-1.482 3.447-2.297 5.537-2.297 1.969 0 3.817.707 5.255 1.994 1.482 1.482 2.297 3.447 2.297 5.537 0 1.969-.707 3.817-1.994 5.255zm3.518-9.609c-.375.375-.375.984 0 1.359.375.375.984.375 1.359 0 .375-.375.375-.984 0-1.359-.375-.375-.984-.375-1.359 0z"/></svg>
+            </a>
+          </div>
+          <div class="flex gap-4">
+            <button id="heroDownloadBtn" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors">
+              Download Resume
+            </button>
+            <a href="#contact" class="px-8 py-3 border-2 border-blue-600 text-blue-400 hover:bg-blue-600/10 rounded-lg font-semibold transition-colors">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+        <div class="order-1 md:order-2 flex justify-center">
+          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 opacity-30 blur-3xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 md:py-24 px-4 bg-slate-900/30">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12 md:mb-16 fade-in">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
+          About Me
+        </h2>
+        <div class="w-20 md:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
+        <div class="card fade-in">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4m-4-4l-4 4"></path></svg>
+            <h3 class="text-xl font-semibold text-white">My Journey</h3>
+          </div>
+          <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-6">
+            I'm a Frontend Developer with a deep passion for crafting intuitive and visually stunning user interfaces. My journey began with a curiosity for design and code, which evolved into a dedicated pursuit of mastering modern frontend technologies.
+          </p>
+          <p class="text-slate-300 text-base md:text-lg leading-relaxed">
+            I focus on writing clean, maintainable code and building responsive applications that provide exceptional user experiences across all devices.
+          </p>
+        </div>
+
+        <div class="space-y-6 fade-in" style="animation-delay: 0.1s">
+          <div class="card">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-blue-500/20 rounded-lg shrink-0">
+                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 16.5S6.5 26.75 12 26.75s10-4.75 10-10.25S17.5 6.253 12 6.253z"></path></svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-white mb-2">Education</h3>
+                <p class="text-slate-400">Computer Science Student | Self-taught Enthusiast</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-blue-500/20 rounded-lg shrink-0">
+                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-white mb-2">Experience</h3>
+                <p class="text-slate-400">Building projects and continuously learning new technologies</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 md:py-24 px-4 bg-slate-900/50 relative overflow-hidden">
+    <div class="container mx-auto max-w-6xl relative z-10">
+      <div class="text-center mb-12 md:mb-16 fade-in">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
+          Skills & Expertise
+        </h2>
+        <div class="w-20 md:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card fade-in">
+          <h3 class="text-2xl text-center text-blue-100 mb-5">Core Skills</h3>
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-slate-200 font-medium">HTML</span>
+                <span class="text-blue-400 font-semibold">95%</span>
+              </div>
+              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-95 rounded-full skill-bar" style="--value: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-slate-200 font-medium">CSS</span>
+                <span class="text-blue-400 font-semibold">90%</span>
+              </div>
+              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-90 rounded-full skill-bar" style="--value: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-slate-200 font-medium">JavaScript</span>
+                <span class="text-blue-400 font-semibold">85%</span>
+              </div>
+              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-85 rounded-full skill-bar" style="--value: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-slate-200 font-medium">React</span>
+                <span class="text-blue-400 font-semibold">85%</span>
+              </div>
+              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-85 rounded-full skill-bar" style="--value: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-slate-200 font-medium">Responsive Design</span>
+                <span class="text-blue-400 font-semibold">90%</span>
+              </div>
+              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-90 rounded-full skill-bar" style="--value: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-slate-200 font-medium">UI/UX</span>
+                <span class="text-blue-400 font-semibold">80%</span>
+              </div>
+              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-80 rounded-full skill-bar" style="--value: 80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-slate-200 font-medium">Git</span>
+                <span class="text-blue-400 font-semibold">85%</span>
+              </div>
+              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-85 rounded-full skill-bar" style="--value: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-slate-200 font-medium">Problem Solving</span>
+                <span class="text-blue-400 font-semibold">90%</span>
+              </div>
+              <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-600 to-blue-400 w-90 rounded-full skill-bar" style="--value: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in" style="animation-delay: 0.1s">
+          <h3 class="text-2xl text-center text-blue-100 mb-5">Currently Learning</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-lg bg-slate-700/30 border border-slate-600/50 text-center text-slate-300 hover:bg-slate-700/50 transition-colors">
+              Next.js
+            </div>
+            <div class="p-4 rounded-lg bg-slate-700/30 border border-slate-600/50 text-center text-slate-300 hover:bg-slate-700/50 transition-colors">
+              TypeScript
+            </div>
+            <div class="p-4 rounded-lg bg-slate-700/30 border border-slate-600/50 text-center text-slate-300 hover:bg-slate-700/50 transition-colors">
+              Advanced CSS
+            </div>
+            <div class="p-4 rounded-lg bg-slate-700/30 border border-slate-600/50 text-center text-slate-300 hover:bg-slate-700/50 transition-colors">
+              Web Performance
+            </div>
+            <div class="p-4 rounded-lg bg-slate-700/30 border border-slate-600/50 text-center text-slate-300 hover:bg-slate-700/50 transition-colors">
+              UI/UX Design
+            </div>
+            <div class="p-4 rounded-lg bg-slate-700/30 border border-slate-600/50 text-center text-slate-300 hover:bg-slate-700/50 transition-colors">
+              State Management
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 md:py-24 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12 md:mb-16 fade-in">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
+          Featured Projects
+        </h2>
+        <div class="w-20 md:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Project 1 -->
+        <div class="card project-card fade-in">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <h3 class="text-2xl font-bold text-white">Sublytics - Subscription Manager</h3>
+                <span class="px-3 py-1 bg-blue-500/30 border border-blue-500/50 text-blue-300 text-sm rounded-full">🚀 Currently Working On</span>
+              </div>
+              <p class="text-slate-300 mb-4 leading-relaxed">
+                A powerful subscription management app that helps users track, organize, and control all their recurring payments in one place. Never miss a renewal date or get charged for forgotten subscriptions again. Built with modern frontend technologies for a seamless user experience.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">React</span>
+                <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">JavaScript</span>
+                <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">TailwindCSS</span>
+                <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">Chart.js</span>
+              </div>
+              <div class="flex gap-4">
+                <a href="https://sublytic-delta.vercel.app/" target="_blank" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                  Live Demo
+                </a>
+                <a href="https://github.com/prajal-gautam" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600/10 rounded-lg transition-colors">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card project-card fade-in" style="animation-delay: 0.1s">
+          <div class="mb-4">
+            <h3 class="text-2xl font-bold text-white mb-3">High-Converting Landing Page</h3>
+            <p class="text-slate-300 mb-4 leading-relaxed">
+              A pixel-perfect landing page designed for maximum conversion. Implements smooth scroll animations, responsive layouts, and optimized performance metrics.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">HTML5</span>
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">CSS3</span>
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">JavaScript</span>
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">GSAP</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                Live Demo
+              </a>
+              <a href="https://github.com/prajal-gautam" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600/10 rounded-lg transition-colors">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card project-card fade-in" style="animation-delay: 0.2s">
+          <div class="mb-4">
+            <h3 class="text-2xl font-bold text-white mb-3">Personal Portfolio Website</h3>
+            <p class="text-slate-300 mb-4 leading-relaxed">
+              A premium portfolio showcasing frontend skills. Built with React and TailwindCSS, featuring glassmorphism design, dark mode, and framer-motion animations.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">React</span>
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">TailwindCSS</span>
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">Framer Motion</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                Live Demo
+              </a>
+              <a href="https://github.com/prajal-gautam" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600/10 rounded-lg transition-colors">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card project-card fade-in" style="animation-delay: 0.3s">
+          <div class="mb-4">
+            <h3 class="text-2xl font-bold text-white mb-3">Interactive To-Do App</h3>
+            <p class="text-slate-300 mb-4 leading-relaxed">
+              A feature-rich task manager with drag-and-drop functionality, local storage persistence, and a highly interactive user interface.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">JavaScript</span>
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">CSS Grid</span>
+              <span class="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">DOM API</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                Live Demo
+              </a>
+              <a href="https://github.com/prajal-gautam" target="_blank" class="px-4 py-2 border border-blue-600 text-blue-400 hover:bg-blue-600/10 rounded-lg transition-colors">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 md:py-24 px-4 bg-slate-900/30">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12 md:mb-16 fade-in">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
+          Get In Touch
+        </h2>
+        <div class="w-20 md:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+        <p class="text-slate-300 text-lg mt-4">Let's build something amazing together</p>
+      </div>
+
+      <div class="max-w-2xl mx-auto card fade-in">
+        <form id="contactForm" class="space-y-6">
+          <div>
+            <label class="block text-slate-300 font-semibold mb-2">Name</label>
+            <input type="text" required class="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Your Name">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-semibold mb-2">Email</label>
+            <input type="email" required class="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="your@email.com">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-semibold mb-2">Message</label>
+            <textarea required rows="5" class="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors resize-none" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors">
+            Send Message
+          </button>
+        </form>
+
+        <div class="mt-12 p-8 bg-slate-800/50 rounded-lg border border-slate-700/50">
+          <p class="text-slate-300 mb-6">Or reach out directly:</p>
+          <div class="space-y-3">
+            <a href="https://mail.google.com/mail/?view=cm&to=prajal.gautam.co@gmail.com" target="_blank" class="flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              prajal.gautam.co@gmail.com
+            </a>
+            <a href="https://github.com/prajal-gautam" target="_blank" class="flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              github.com/prajal-gautam
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/50 py-8 px-4">
+    <div class="container mx-auto max-w-6xl text-center text-slate-400">
+      <p>&copy; 2026 Prajal Gautam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-4 right-4 px-6 py-4 bg-green-500 text-white rounded-lg shadow-lg opacity-0 pointer-events-none transition-opacity duration-300" style="z-index: 1000;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
